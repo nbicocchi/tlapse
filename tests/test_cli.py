@@ -181,9 +181,10 @@ class CliTests(unittest.TestCase):
         self.assertIn("Starting timelapse", logs.output[0])
         for parameter in ("url=<redacted>", "mode=images", "output=", "duration=5.0 s",
                           "speedup=50.0x", "average_frames=2", "fps=25.0", "crf=26", "maxrate=6M",
-                          "rotation=daily-at-local-midnight", "log_level=INFO"):
+                          "log_level=INFO"):
             self.assertIn(parameter, logs.output[0])
         self.assertNotIn("interval=", logs.output[0])
+        self.assertNotIn("rotation=", logs.output[0])
         self.assertIn("Timelapse completed: 2 output frames saved", logs.output[-1])
         self.assertNotIn("rtsp://example", "\n".join(logs.output))
 

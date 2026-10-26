@@ -16,9 +16,9 @@ services:
       TLAPSE_OUTPUT: /data
       TLAPSE_DURATION: "inf"
       TLAPSE_SPEEDUP: "144"
-      TLAPSE_AVG_FRAMES: "16"
+      TLAPSE_AVG_FRAMES: "2"
       TLAPSE_FPS: "24"
-      TLAPSE_CRF: "28"
+      TLAPSE_CRF: "30"
       TLAPSE_MAXRATE: "5M"
       TLAPSE_LOG_LEVEL: INFO
 

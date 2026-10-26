@@ -130,7 +130,7 @@ def run(args):
         logger.info(
             "Starting timelapse: url=<redacted>, mode=%s, output=%s, "
             "duration=%s s, speedup=%sx, average_frames=%d, fps=%s, "
-            "crf=%d, maxrate=%s, rotation=daily-at-local-midnight, log_level=%s",
+            "crf=%d, maxrate=%s, log_level=%s",
             args.mode, args.output.resolve(), args.duration, args.speedup, args.frames,
             args.fps, args.crf, args.maxrate, args.log_level,
         )
