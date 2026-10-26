@@ -1,0 +1,37 @@
+# Local environment overrides (.env is intentionally tracked)
+.env.*
+!.env.example
+
+# Python caches and virtual environments
+.python-version
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+build/
+dist/
+*.egg-info/
+
+# Generated timelapse output and temporary video snapshots
+output/
+*.mp4
+img_*.png
+media_telecamera*.png
+.timelapse-*
+*.log
+
+# Editor and operating system files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db

@@ -1,0 +1,9 @@
+# Only send the application and build instructions to the Docker daemon.
+*
+!Dockerfile
+!.dockerignore
+!src/
+!src/tlapse/
+!src/tlapse/*.py
+**/__pycache__/
+**/*.py[cod]

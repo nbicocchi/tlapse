@@ -1,0 +1,39 @@
+services:
+
+  tlapse:
+    build: .
+    image: tlapse:local
+    container_name: tlapse
+    restart: unless-stopped
+
+    user: "1000:1000"
+    stop_grace_period: 2m
+
+    environment:
+      TZ: UTC
+      TLAPSE_URL: "rtsp://192.168.1.100:8554/annke_main"
+      TLAPSE_MODE: video
+      TLAPSE_OUTPUT: /data
+      TLAPSE_DURATION: "inf"
+      TLAPSE_SPEEDUP: "4"
+      TLAPSE_AVG_FRAMES: "1"
+      TLAPSE_FPS: "24"
+      TLAPSE_CRF: "28"
+      TLAPSE_MAXRATE: "3M"
+      TLAPSE_LOG_LEVEL: INFO
+
+    volumes:
+      - ./output:/data
+
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+#    networks:
+#      - mqtt-net
+
+#networks:
+#  mqtt-net:
+#    external: true
