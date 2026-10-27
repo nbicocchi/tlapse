@@ -30,10 +30,3 @@ services:
       options:
         max-size: "10m"
         max-file: "3"
-
-#    networks:
-#      - mqtt-net
-
-#networks:
-#  mqtt-net:
-#    external: true
